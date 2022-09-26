@@ -51,6 +51,15 @@ header .row{
 .card span{
     float: right;
 }
+.card-img img{
+    
+    transition: 0.2s ;
+}
+.card-img img:hover{
+   /*top: -1rem;*/
+    box-shadow: 0.2rem 0.4rem 0.4rem #cbcdd0;
+    transform: translateY(-0.5rem);
+}
 .free{
     background-color: #daefed;
     color: #00ac69;
