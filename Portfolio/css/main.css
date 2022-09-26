@@ -141,6 +141,10 @@ img.avatar {
   text-align: center;
   margin: 0;
 }
+.portfolio-item img{
+  width: 20rem;
+  height: 15rem;
+}
 
 .portfolio-item figcaption {
   position: absolute;
