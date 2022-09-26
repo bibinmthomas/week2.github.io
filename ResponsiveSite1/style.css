@@ -20,6 +20,7 @@ header .row{
     
 }
 .bg-first{
+    margin-top: 93px;
     height: 40rem;
     width: 100vw;
     background-image: linear-gradient(176deg, #f2f6fc 70%, #ffff calc(70% + 2px)) 
@@ -135,4 +136,25 @@ header .row{
 .bg-footer-fill p{
     transform: rotateY(180deg);
     
+}
+.social{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+}
+.social .img-1{
+    position: absolute;
+    margin-top:-2rem;
+    margin-right: 10rem;
+}
+.social .img-2{
+    position: absolute;
+    margin-top:-2rem;
+    margin-right: 7.5rem;
+}
+.social .img-3{
+    position: absolute;
+    margin-top:-2rem;
+    margin-right: 5rem;
 }
