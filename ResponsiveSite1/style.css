@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width: 100vw;
+}
+section{
+    width: 100vw;
+}
 header .row{
     height: 93px;
     
@@ -26,6 +32,7 @@ header .row{
     background-image: linear-gradient(176deg, #f2f6fc 70%, #ffff calc(70% + 2px)) 
 }
 .section1{
+    width: 100vw;
     height: 40rem;
     padding-top: 5rem;
 }
@@ -108,6 +115,7 @@ header .row{
 .footer{
     position: relative;
     padding-top: 4rem;
+    background: #f2f6fc 70%;
     color: #69707a;
     transform: rotateY(180deg);
 }
