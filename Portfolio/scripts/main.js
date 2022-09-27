@@ -91,27 +91,67 @@
   // Add your javascript here
 
   
-  $("#formValidation").validate({
+  $("#gform").validate({
     rules:{
         name:{
             minlength:2
         },
         email:{
             email:true
+        },
+        message:{
+          minlength:5
         }
     },
     message:{
        name:{
-        required:"Enter Your name!",
+
         minlength:"Please enter atlest 2 characters."
        },
-       email:"Enter Your Email!",
-       message:"Enter Your Message"
+       message:{
+        minlength:"Please enter atleast 5 characters."
+       }
     },
 
     submitHandler:function(form){
-        form.submit();
+        //form.submit();
+        $("#gform").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbyOG1uGa0YkdwHg4tLwc4SM1As8Z80p-3Uxx7M9WCCVj37FvQmbyJmUz2XODloScdFY/exec",
+              data:$("#gform").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
+        
+              }
+          })
+        })
     }
 });
+
+/*$("#gform").submit((e)=>{
+  e.preventDefault()
+  $.ajax({
+      url:"https://script.google.com/macros/s/AKfycbyOG1uGa0YkdwHg4tLwc4SM1As8Z80p-3Uxx7M9WCCVj37FvQmbyJmUz2XODloScdFY/exec",
+      data:$("#gform").serialize(),
+      method:"post",
+      success:function (response){
+          alert("Form submitted successfully")
+          window.location.reload()
+          //window.location.href="https://google.com"
+      },
+      error:function (err){
+          alert("Something Error")
+
+      }
+  })
+})*/
+
 
 })();
